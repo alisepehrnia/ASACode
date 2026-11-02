@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	@Html.Partial("_SEOPartial")
+	@Html.Partial("_HeadPartial")
+</head>
+<body class="d-flex flex-column">
+@Html.Partial("_Header")
+
+<div class="container-fluid p-4">
+	<div class="row">
+		@Html.Partial("_Sidebar")
+
+		<main class="ms-auto col-md-9 col-lg-10 col-8 px-4">
+			@RenderBody()
+		</main>
+	</div>
+</div>
+
+@Html.Partial("_Footer")
+
+@Html.Partial("_BodyScriptsPartial")
+@RenderSection("scripts", false)
+</body>
+</html>
